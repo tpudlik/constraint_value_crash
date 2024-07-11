@@ -1,0 +1,16 @@
+load("@local_config_platform//:constraints.bzl", "HOST_CONSTRAINTS")
+
+platform(
+    name = "platform",
+    constraint_values = [
+        ":library",
+    ] + HOST_CONSTRAINTS,
+)
+
+cc_library(
+    name = "library",
+)
+
+cc_binary(
+    name = "binary",
+)
